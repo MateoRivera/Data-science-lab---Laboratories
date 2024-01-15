@@ -9,7 +9,7 @@ def custom_error2(y_true, y_pred):
     from sklearn.metrics.pairwise import euclidean_distances
     return np.mean(np.diag(euclidean_distances(y_true, y_pred)))
 
-def custom_error3(estimator, X_test, y_test):
+def custom_error_for_large_datasets(estimator, X_test, y_test):
     from scipy.spatial.distance import euclidean
     import numpy as np
     y_pred = estimator.predict(X_test)
